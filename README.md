@@ -5,3 +5,5 @@
 
 #### glsl
 Программа написана на Lua + GLSL
+
+![screen: glsl/screen.png](/glsl/screen.png)
