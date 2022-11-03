@@ -1,13 +1,14 @@
 function love.load()
 	shader = love.graphics.newShader('shader.glsl')
+	shader:send("screen_size", {800, 600})
 
 	canvas = love.graphics.newCanvas(800, 600)
 	canvas_buffer = love.graphics.newCanvas(800, 600)
 
 	canvas:setFilter('nearest')
+	canvas_buffer:setFilter('nearest')
 
 	love.graphics.setCanvas(canvas)
-	
 	for x = 1, 800 do
 		for y = 1, 600 do
 			if math.random(0, 1) == 0 then
@@ -15,7 +16,6 @@ function love.load()
 			end
 		end
 	end
-
 	love.graphics.setCanvas()
 end
 
